@@ -13,7 +13,7 @@ para despues ser entornos en **Aframe**, los codigos presentes abarcan desde pru
 un primitivo, asi mismo se trabaja con la importacion de videos o de modelos *gltf* (modelos de 3D de blender) para utilizarlos
 en entornos inmersivos. Al igual se trabajo con las colisiones, es decir, que nosotros en un entorno virtual no podamos atravezar ciertos objetos. 
 
-![Mi Imagen en Carpeta](C:\Users\estre\Documents\Tareas_UEA_4\Trabajos_UEA_4_VSC\assets\img)
+![Mi Imagen en Carpeta](C:\Users\estre\Documents\Tareas_UEA_4\Trabajos_UEA_4_VSC\assets\img\yo_pez.jpg)
 
 Espero que algun codigo te sirva y espero verte pronto. 
 
