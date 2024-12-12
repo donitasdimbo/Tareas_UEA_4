@@ -13,13 +13,14 @@ para despues ser entornos en **Aframe**, los codigos presentes abarcan desde pru
 un primitivo, asi mismo se trabaja con la importacion de videos o de modelos *gltf* (modelos de 3D de blender) para utilizarlos
 en entornos inmersivos. Al igual se trabajo con las colisiones, es decir, que nosotros en un entorno virtual no podamos atravezar ciertos objetos. 
 
-![representacionDONNIE] (https://github.githubassets.com/yo_pez.jpg) 
+![Descripción de la imagen](/assets/yo_pez.jpg)
+
 
 Espero que algun codigo te sirva y espero verte pronto. 
 
 Vinculos de las tecnologias:   
-[Aframe] (https://aframe.io/)
-[Blender] (https://www.blender.org/) 
-[Git] (https://www.blender.org/)
+[Aframe] (https://aframe.io/)  
+[Blender] (https://www.blender.org/)   
+[Git] (https://www.blender.org/)  
 
 
