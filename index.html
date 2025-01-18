@@ -7,6 +7,9 @@
 
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/MozillaReality/ammo.js@8bbc0ea/builds/ammo.wasm.js"></script>
     
 
 </head>
@@ -14,11 +17,70 @@
 <body>
     <a-scene >
 
-        <a-entity text="value: Los eh encontrado chavales,\n ahora experimentaran el castigo divino; font:assets/Fonts/custom3-msdf.json; fontImage:assets/Fonts/custom3.png; negate:false ; color: red; width: 10; " position="0.5 3 -3 "> </a-entity>
-        <a-entity text="value: Los eh encontrado chavales,\n ahora experimentaran el castigo divino; font:assets/Fonts/custom3-msdf.json; fontImage:assets/Fonts/custom3.png; negate:false ; color: white; width: 10; " position="0.5 2.97 -2.99 "> </a-entity>
-        <a-entity geometry="primitive: cylinder; height: 1.5; radius: 1 " material="color:black" position="2 0.5 -3" ></a-entity>
-        <a-entity geometry="primitive: box; " material="color:pink" position=" -2 0.5 -3" animation="property: object3D.position.y; to: 1.2; dir: alternate; dur: 1000; loop: true" ></a-entity>
-        <a-entity environment="preset: japan; dressingAmount: 20; skyType:color; skyColor: black"></a-entity>
+        <a-entity environment="preset: arches; dressingAmount: 1;  groundYScale:0.15; groundColor:#548e2f; groundColor2:#1d7216"></a-entity>
+
+        <a-entity id="rig" movement-controls="constrainToNavMesh: true; controls: checkpoint, gamepad, trackpad, keyboard, nipple;" position="0 0 0">
+            <a-entity camera position="0 1.6 0" look-controls="pointerLockEnabled: true">
+                <a-cursor></a-cursor>
+            </a-entity>
+        </a-entity>
+
+        <a-entity navmesh
+            normal-material
+            visible="true"
+            position="0 0.1 0"
+            gltf-model="#navmesh">
+        </a-entity>
+
+
+        <a-assets>
+            <a-asset-item id="navmesh" src="modelos 3d/navashmesh.glb"></a-asset-item>
+            <a-asset-item id="casas1" src="modelos 3d/casas.glb"></a-asset-item>
+            <a-asset-item id="casas2" src="modelos 3d/casas2.glb"></a-asset-item>
+            <a-asset-item id="plaza" src="modelos 3d/plaza.glb"></a-asset-item>
+
+
+            <!--imagenes-->
+            <img id="arbol" src="imagenes/arbol.png">
+            <img id="arbol2" src="imagenes/arbol2.png">
+            <img id="arbol3" src="imagenes/arbol3.png">
+            <img id="ave" src="imagenes/aves.png">
+
+
+
+
+        </a-assets>
+        
+        <a-entity gltf-model="#plaza" position="0 0.1 0"></a-entity>
+        <a-entity gltf-model="#navmesh" nav-mesh position="0 0 0"></a-entity>
+        <a-entity gltf-model="#casas1"  ></a-entity>
+        <a-entity gltf-model="#casas2" ></a-entity>
+
+        
+
+        <!--figuras en aframe-->
+        
+        <a-entity geometry="primitive: box; height:10; width:9 ; depth:0.15;" material="" position=" 0 0 0" rotation="90 0 0" ></a-entity>
+      
+        <!--imagenes-->
+        <a-image src="#arbol" position="-9.5 1.9 -2" scale="5 5 5"></a-image>
+        <a-image src="#arbol" position="-9.5 1.9 -2" scale="5 5 5"></a-image>
+        <a-image src="#arbol" position="-9.5 1.9 -5" scale="5 5 5"></a-image>
+        <a-image src="#arbol" position="-9.5 1.9 -9" scale="5 5 5"></a-image>
+        <a-image src="#arbol2" position="-9 2.7 10" scale="5 5 5"></a-image>
+        <a-image src="#arbol2" position="-9.1 2.7 12" scale="5 5 5"></a-image>
+        <a-image src="#arbol2" position="-6 2.7 13" scale="5 5 5"></a-image>
+        <a-image src="#arbol2" position="-9.5 1.9 -9" scale="5 5 5"></a-image>
+        <a-image src="#arbol3" position="8.5 3 -2" scale="5 5 5"></a-image>
+        <a-image src="#arbol3" position="8.5 3 -7" scale="5 5 5"></a-image>
+        <a-image src="#arbol3" position="8.5 3 -10" scale="5 5 5"></a-image>
+        <a-image src="#ave" position="2 0.5 -3" scale="1 1 1"></a-image>
+
+
+        <a-entity id="river" sound="src:sonidos/aves.mp3; autoplay: true" positional="false"></a-entity>
+
+        <a-entity text="color: white; font: Fonts/custom3-msdf.json; fontImage: Fonts/custom3.png; negate: false; value: Eres real; width: 5" position="4.14996 1.19196 -3"> </a-entity>
+
 
     </a-scene>
     
